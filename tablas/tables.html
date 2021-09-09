@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+</head>
+    <style>
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+.styled-cap { color: #4c4a37; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; line-height: 32px; margin: 0 0 24px; }
+    </style>
+<body>
+<table class="styled-table">
+ <tr>
+ <th>Nombre:</th>
+ <td>Carlos Gonzalez </td>
+ </tr>
+ <tr>
+ <th rowspan="2"> Telefono:</th>
+ <td>54577857</td>
+ </tr>
+ <tr>
+ <td>54577856</td>
+ </tr> 
+</table>
+<br>
+<table class="styled-table">
+ <tr>
+ <th>Nombre</th>
+ <th colspan="2">Telefono</th>
+ </tr>
+ <tr>
+ <td>Carlos Gonzalez</td>
+ <td>4450191</td>
+ <td>4450152</td>
+ </tr>
+</table>
+<br>
+<table class="styled-table">
+ <tr>
+ <th>No.</th>
+ <th>Nombre</th>
+ <th>Edad</th>
+ </tr>
+ <tr>
+ <td>1</td>
+ <td>Simon Bolivar</td>
+ <td>16</td>
+ </tr>
+ <tr>
+ <td>2</td>
+ <td>Francisco de Miranda</td>
+ <td>34</td>
+ </tr>
+</table>
+<br>
+<table class="styled-table">
+ <caption class="styled-cap"><strong>Información de Usuarios</strong></caption>
+ <tr>
+ <th>Nro.</th>
+ <th>Nombre</th>
+ <th>Edad</th>
+ </tr>
+ <tr>
+ <td>1</td>
+ <td>Antorio Sucre</td>
+ <td>16</td>
+ </tr>
+ <tr>
+ <td>2</td>
+ <td>Simon Bolivar</td>
+ <td>34</td>
+ </tr>
+ </table>
+
+<br>
+<table class="styled-table">
+ <thead>
+ <tr>
+ <th>Productos</th>
+ <th>Costo</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Cajas de Carton</td>
+ <td>$ 2,000</td>
+ </tr>
+ <tr>
+ <td>Closet</td>
+ <td>$ 10,000</td>
+ </tr>
+ </tbody>
+ <tfoot>
+ <tr>
+ <th>Total</th>
+ <td>$ 12,000</td>
+ </tr>
+ </tfoot>
+</table>
+
+</body>
+</html>

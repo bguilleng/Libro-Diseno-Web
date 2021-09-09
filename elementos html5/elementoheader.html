@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="utf-8"> 
+<title>Mi pagina web</title>
+ <style> 
+body { font: 14px Arial,sans-serif; margin: 0px; } 
+.header { padding: 10px 20px; background: #e6f2ff; } 
+.header h1 { font-size: 24px; } 
+.container { width: 100%; background: #ccccff; } 
+.nav, .section { float: left; padding: 20px; min-height: 170px; box-sizing: border-box; } 
+.nav { width: 20%; background: #e6e6ff; } 
+.section { width: 80%; } 
+.nav ul { list-style: none; line-height: 24px; padding: 0px; } 
+.nav ul li a { color: #333; } 
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; } 
+.footer { background: #e6f9ff; text-align: center; padding: 5px; }
+ </style>
+</head>
+
+<body>
+ <header class="header">
+  <a src="/" id="logo">Mis Articulos</a>
+  <nav class="nav">
+   <ul>
+    <li><a href="/">Inicio</a></li>
+    <li><a href="/acerca">Acerca de</a></li>
+    <li><a href="/contacto">Contacto</a></li>
+   </ul>
+  </nav> 
+ </header>
+<main>
+<article class="container">
+ <header>
+  <h2>Titulo del Arcticulo</h2>
+  <span class="byline">Por Giovanny Guillen</span>
+ </header>
+ <p>El éxito está en la perceveracia, quien trabaja por lograr sus objetivos sin descanso día y noche alcanza el éxito. </p>
+</article> 
+</main>
+<footer class="footer"><h2>Pie de Página</h2></footer>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>Otro Ejemplo Worker</title>
+ </head>
+ <body>
+  <p>El número primo más alto encontrado: <output id="result"></output></p>
+  <script>
+   var worker = new Worker('worker.js');
+   worker.onmessage = function (event) {
+     document.getElementById('result').textContent = event.data;
+   };
+  </script>
+ </body>
+</html>
+

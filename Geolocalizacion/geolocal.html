@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="utf-8"> 
+<link rel="stylesheet" href="button-style.css" type="text/css" media="screen" />
+<title>Obtener la posición actual</title> 
+<script> 
+function showPosition() 
+{ 
+ if(navigator.geolocation) 
+ { 
+   navigator.geolocation.getCurrentPosition(function(position) 
+  { 
+    var positionInfo = "Su posición actual es (" + "Latitud: " +    position.coords.latitude + ", " + "Longitud: " + position.coords.longitude + ")"; 
+	document.getElementById("result").innerHTML = positionInfo; 
+  }); 
+ } 
+ else 
+ { 
+   alert("Lo sentimos, su navegador no admite la geolocalización HTML5."); 
+ } 
+} 
+</script> 
+</head> 
+<body> 
+<div class="container">
+<div class="content">
+<button class="name noselect" onclick="showPosition();">Mostrar posición
+</button>
+</div>
+
+<br>
+<div id="result" class="content"> 
+<!--La información de la posición se insertará aquí--> 
+</div>  
+</div>
+</body> 
+</html>

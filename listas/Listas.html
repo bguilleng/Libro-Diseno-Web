@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+</head>
+<style>
+ul {
+  list-style-type: none;
+}
+ul li::before {
+  content: "✅";
+  display: inline-block;
+  margin-right: 0.2rem;
+}
+
+ul ul li::before {
+  content: "📌";
+}
+ul ul ul li::before {
+  content: "🤷‍♀️";
+}
+.styled-text{ color: #4c4a37; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; line-height: 25px; margin: 0 0 5px; }
+
+ol {
+  list-style: none;
+  counter-reset: steps;
+}
+ol li {
+  counter-increment: steps;
+}
+ol li::before {
+  content: counter(steps);
+  margin-right: 0.5rem;
+  background: #ff6f00;
+  color: white;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  line-height: 1.2em;
+}
+ol ol li::before {
+  background: darkorchid;
+}
+</style>
+<body>
+<ul>
+ <li class="styled-text">Torta de chocolate</li>
+ <li class="styled-text">Torta Selva Negra</li>
+ <li class="styled-text">Torta de piña</li> 
+</ul>
+
+<br>
+<ol>
+ <li class="styled-text">Abrocharse el cinturón de seguridad</li>
+ <li class="styled-text">Encender el motor del carro</li>
+ <li class="styled-text">Mira alrededor e inicia la marcha</li>
+</ol>
+
+</body>
+</html>

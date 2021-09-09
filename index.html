@@ -2,156 +2,208 @@
 <html>
 <head>
 <meta charset="utf-8">
+<link rel="stylesheet" href="css/menu-ver.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style-button.css" type="text/css" media="screen" />
+
 <title>Documento sin título</title>
-<style type="text/css">
-<!--
-body {
-	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
-	background-color: #42413C;
-	margin: 0;
-	padding: 0;
-	color: #000;
-}
-/* ~~ Selectores de elemento/etiqueta ~~ */
-ul, ol, dl { 
-	padding: 0;
-	margin: 0;
-}
-h1, h2, h3, h4, h5, h6, p {
-	margin-top: 0;	
-	padding-right: 15px;
-	padding-left: 15px; 
-}
-a img { 
-	border: none;
-}
-
-a:link {
-	color: #42413C;
-	text-decoration: underline; 
-}
-a:visited {
-	color: #6E6C64;
-	text-decoration: underline;
-}
-a:hover, a:active, a:focus { 
-	text-decoration: none;
-}
-/* ~~ Este contenedor de anchura fija rodea a todas las demás bloques ~~ */
-.container {
-	width: 960px;
-	background-color: #FFFFFF;
-	margin: 0 auto; /* el valor automático de los lados, unido a la anchura, centra el diseño  */
-}
-/* ~~ No se asigna una anchura al encabezado. Se extenderá por toda la anchura del diseño. ~~ */
-header {
-	background-color: #ADB96E;
-}
-
-.sidebar1 {
-	float: right;
-	width: 180px;
-	background-color: #EADCAE;
-	padding-bottom: 10px;
-}
-.content {
-	padding: 10px 0;
-	width: 780px;
-	float: right;
-}
-
-/* ~~ Este selector agrupado da espacio a las listas del área de .content ~~ */
-.content ul, .content ol {
-	padding: 0 15px 15px 40px; 
-}
-
-
-ul.nav {
-	list-style: none; /* esto elimina el marcador de lista */
-	border-top: 1px solid #666; 
-	margin-bottom: 15px; 
-}
-ul.nav li {
-	border-bottom: 1px solid #666;
-}
-ul.nav a, ul.nav a:visited { 
-	padding: 5px 5px 5px 15px;
-	display: block; 
-	width: 160px;  
-	text-decoration: none;
-	background-color: #C6D580;
-}
-ul.nav a:hover, ul.nav a:active, ul.nav a:focus { 
-	background-color: #ADB96E;
-	color: #FFF;
-}
-
-/* ~~ El pie de página ~~ */
-footer {
-	padding: 10px 0;
-	background-color: #CCC49F;
-	position: relative;
-	clear: both; 
-header, section, footer, aside, article, figure {
-	display: block;
-}
-
-</style>
-
 </head>
 
 <body>
-
 <div class="container">
-  <header>
-    <a href="#"><img src="" alt="Insertar logotipo aquí" width="180" height="90" id="Insert_logo" style="background-color: #C6D580; display:block;" /></a>
-  </header>
-  <div class="sidebar1">
-    <ul class="nav">
-        <li><button id="btn1">Capitulo Web Worker</button></li>
-        <li><a href="#">Vínculo dos</a></li>
-        <li><a href="#">Vínculo tres</a></li>
-        <li><a href="#">Vínculo cuatro</a></li>
-    </ul>
-    <aside>
-      <p> . </p>
-      <p> .</p>
-    </aside>
-  <!-- end .sidebar1 --></div>
-  <article class="content">
-    <h1>Instrucciones</h1>
+<nav>
+		<ul class="mcd-menu">
+			<li>
+				<a href="https://bguilleng.github.io/gguillenb-website/" target="_blank">
+					<i class="fa fa-home"></i>
+					<strong>Home</strong>
+					<small>sweet home</small>
+				</a>
+			</li>
+			<li>
+				<a href="https://bguilleng.github.io/gguillenb-resume/" class="active" target="_blank">
+					<i class="fa fa-edit"></i>
+					<strong>Acerca de mi</strong>
+					<small>sweet home</small>
+				</a>
+			</li>
+			<li>
+            
+				<a href="">
+					<i class="fa fa-gift"></i>
+					<strong>Texto</strong>
+					<small>Ejemplo de texto</small>
+				</a>
+                <ul>
+                <button id="btn8" class="r-button ai-element ai-element_type2 ai-element2"><span class="ai-element__label"><i class="fa fa-globe"></i><strong>  Varios Textos</strong></span></button>
+                </ul>
+			</li>
+			<li>
+				<a href="">
+					<i class="fa fa-globe"></i>
+					<strong>Listas</strong>
+					<small>Ejemplos de listas</small>
+				</a>
+                <ul>
+                <button id="btn4" class="r-button ai-element ai-element_type2 ai-element2"><span class="ai-element__label"><i class="fa fa-globe"></i><strong>  Listas</strong></span></button>
+                <button id="btn5" class="r-button ai-element ai-element_type2 ai-element2"><span class="ai-element__label"><i class="fa fa-group"></i><strong>  Lista Numerada 1</strong></span></button>
+                <button id="btn6" class="r-button ai-element ai-element_type2 ai-element2"><span class="ai-element__label"><i class="fa fa-tasks"></i><strong>  Lista Numerada 2</strong></span></button>
+                <button id="btn7" class="r-button ai-element ai-element_type2 ai-element2"><span class="ai-element__label"><i class="fa fa-tasks"></i><strong>  Lista Numerada 3</strong></span></button>
+                <button id="btn9" class="r-button ai-element ai-element_type2 ai-element2"><span class="ai-element__label"><i class="fa fa-tasks"></i><strong>  Lista Definición 1</strong></span></button>
+                <button id="btn10" class="r-button ai-element ai-element_type2 ai-element2"><span class="ai-element__label"><i class="fa fa-tasks"></i><strong>  Lista Definición 2</strong></span></button>
+                <button id="btn11" class="r-button ai-element ai-element_type2 ai-element2"><span class="ai-element__label"><i class="fa fa-tasks"></i><strong>  Lista Definición 3</strong></span></button>
+            </ul>
+			<li>
+				<a href="">
+					<i class="fa fa-comments-o"></i>
+					<strong>Web Worker</strong>
+					<small>Ejemplos de Web Worker</small>
+				</a>
+				<ul>
+                <button id="btn1" class="r-button ai-element ai-element_type2 ai-element2"><span class="ai-element__label"><i class="fa fa-globe"></i><strong>  Web Worker Contar</strong></span></button>
+                <button id="btn2" class="r-button ai-element ai-element_type2 ai-element2"><span class="ai-element__label"><i class="fa fa-group"></i><strong>  Iniciar / Detener</strong></span></button>
+                <button id="btn3" class="r-button ai-element ai-element_type2 ai-element2"><span class="ai-element__label"><i class="fa fa-tasks"></i><strong>  Web Worker Primos</strong></span></button>
+                
+                
+					<li><a href="#"><i class="fa fa-globe"></i>Mission</a></li>
+					<li><a href="#"><i class="fa fa-group"></i>Our Team</a>
+
+							<li><a href="#"><i class="fa fa-female"></i>Leyla Sparks</a></li>
+							<li>
+								<a href="#"><i class="fa fa-male"></i>Gleb Ismailov</a>
+								<ul>
+									<li><a href="#"><i class="fa fa-leaf"></i>About</a></li>
+									<li><a href="#"><i class="fa fa-tasks"></i>Skills</a></li>
+								</ul>
+							</li>
+							<li><a href="#"><i class="fa fa-female"></i>Viktoria Gibbers</a></li>
+
+					</li>
+					<li><a href="#"><i class="fa fa-trophy"></i>Rewards</a></li>
+					<li><a href="#"><i class="fa fa-certificate"></i>Certificates</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">
+					<i class="fa fa-envelope-o"></i>
+					<strong>Geolocalización</strong>
+					<small>Buscar ubicación</small>
+				</a>
+                <ul>
+                <button id="btn12" class="r-button ai-element ai-element_type2 ai-element2"><span class="ai-element__label"><i class="fa fa-trophy"></i><strong>  Coordenadas</strong></span></button>
+                <button id="btn13" class="r-button ai-element ai-element_type2 ai-element2"><span class="ai-element__label"><i class="fa fa-picture-o"></i><strong>  Gestión Error</strong></span></button>
+                <button id="btn14" class="r-button ai-element ai-element_type2 ai-element2"><span class="ai-element__label"><i class="fa fa-certificate"></i><strong>  Google Map</strong></span></button>
+                <button id="btn15" class="r-button ai-element ai-element_type2 ai-element2"><span class="ai-element__label"><i class="fa fa-leaf"></i><strong>  Opciones</strong></span></button>
+                <button id="btn16" class="r-button ai-element ai-element_type2 ai-element2"><span class="ai-element__label"><i class="fa fa-group"></i><strong>  Monitoreo</strong></span></button>
+                </ul>
+			</li>
+			<li>
+				<a href="">
+					<i class="fa fa-envelope-o"></i>
+					<strong>Contacts</strong>
+					<small>drop a line</small>
+				</a>
+			</li>
+			<li class="float">
+				<a class="search">
+					<input type="text" value="search ...">
+					<button><i class="fa fa-search"></i></button>
+				</a>
+				<a href="" class="search-mobile">
+					<i class="fa fa-search"></i>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</div>
+<div class="frame-container">
     <section>
-     <h2>Cómo utilizar este documento</h2>
-      <iframe src="" id="wiframe" width="770" marginwidth="0" height="630" marginheight="0" align="middle" scrolling="auto"></iframe>
+     <h1><strong>Ejemplos del Libro</strong></h1>
+      <iframe src="" id="wiframe" width="800" marginwidth="0" height="550" marginheight="0" align="middle" scrolling="auto"   allow="geolocation; microphone; camera"></iframe>
     </section>
-    <section>
-      <h2>Método de borrado</h2>
-      <p>Dado que todas las columnas son flotantes, este diseño usa una declaración clear:both en la regla footer.  Esta técnica de borrado fuerza a .container a conocer dónde terminan las columnas con el fin de mostrar cualquier borde o color de fondo que coloque en .container. Si su diseño exige la eliminación de .footer de .container, deberá usar un método de borrado diferente. Lo más fiable es añadir un &lt;br class=&quot;clearfloat&quot; /&gt; o &lt;div  class=&quot;clearfloat&quot;&gt;&lt;/div&gt; después de la última columna flotante (pero antes del cierre de .container). Esto proporcionará el mismo efecto de borrado. </p>
-    </section>
-    <section>
-      <h2>Sustitución de logotipo</h2>
-      <p>Se ha utilizado un marcador de posición de imagen en el header de este diseño, en el que lo más probable es que desee colocar un logotipo. Se recomienda quitar el marcador de posición y reemplazarlo por su propio logotipo vinculado. </p>
-      <p>Tenga en cuenta que si utiliza el inspector de propiedades para navegar hasta la imagen de su logotipo empleando el campo Origen (en lugar de quitar y reemplazar el marcador de posición), deberá quitar el fondo en línea y mostrar las propiedades. Estos estilos en línea sólo se utilizan para hacer que el marcador de posición del logotipo aparezca en los navegadores para fines de demostración. </p>
-      <p>Para quitar los estilos en línea, asegúrese de que el panel Estilos CSS está configurado como Actual. Seleccione la imagen y, en la sección Propiedades del panel Estilos CSS, haga clic con el botón derecho del ratón y elimine las propiedades de visualización y de fondo. (Por supuesto que siempre podrá ir directamente al código y eliminar allí los estilos en línea de la imagen o el marcador de posición.)</p>
-    </section>
-    <section>
-      <h2>Fondos</h2>
-      <p>Por naturaleza, el color de fondo de cualquier elemento del bloque sólo se muestra a lo largo del contenido. Esto significa que si está usando un color de fondo o un borde para crear el aspecto de una columna lateral, éste no se extenderá hasta el pie de página, sino que se detendrá donde termine el contenido. Si el bloque de .content siempre va a incluir más contenido, puede colocar un borde en el bloque de .content para separarla de la columna.</p>
-    </section>
-    <!-- end .content --></article>
-  <footer>
-    <p>Este footer contiene la declaración position:relative; para dar a Internet Explorer 6 hasLayout para footer y provocar que se borre correctamente. Si no es necesario proporcionar compatibilidad con IE6, puede quitarlo.</p>
-    <address>
-      Contenido de dirección
-    </address>
-  </footer>
-  <!-- end .container --></div>
+</div>
   <script>
 var frame = document.getElementById("wiframe")
 var btn1 = document.getElementById("btn1");
+var btn2 = document.getElementById("btn2");
+var btn3 = document.getElementById("btn3");
+var btn4 = document.getElementById("btn4");
+var btn5 = document.getElementById("btn5");
+var btn6 = document.getElementById("btn6");
+var btn7 = document.getElementById("btn7");
+var btn8 = document.getElementById("btn8");
+var btn9 = document.getElementById("btn9");
+var btn10 = document.getElementById("btn10");
+var btn11 = document.getElementById("btn11");
+var btn12 = document.getElementById("btn12");
+var btn13 = document.getElementById("btn13");
+var btn14 = document.getElementById("btn14");
+var btn15 = document.getElementById("btn15");
+var btn16 = document.getElementById("btn16");
+
 btn1.addEventListener("click",link1)
+btn2.addEventListener("click",link2)
+btn3.addEventListener("click",link3)
+btn4.addEventListener("click",link4)
+btn5.addEventListener("click",link5)
+btn6.addEventListener("click",link6)
+btn7.addEventListener("click",link7)
+btn8.addEventListener("click",link8)
+btn9.addEventListener("click",link9)
+btn10.addEventListener("click",link10)
+btn11.addEventListener("click",link11)
+btn12.addEventListener("click",link12)
+btn13.addEventListener("click",link13)
+btn14.addEventListener("click",link14)
+btn15.addEventListener("click",link15)
+btn16.addEventListener("click",link16)
 function link1(){
-  frame.src="web-worker.html"
+  frame.src="web worker/web-worker.html"
+}
+function link2(){
+  frame.src="web worker/web-worke2r.html"
+}
+function link3(){
+  frame.src="Otro Worker/web-worker.html"
+}
+function link4(){
+  frame.src="listas/listas.html"
+}
+function link5(){
+  frame.src="listas/listas_num.html"
+}
+function link6(){
+  frame.src="listas/listas_num-set.html"
+}
+function link7(){
+  frame.src="listas/listas_num-set-css.html"
+}
+function link8(){
+  frame.src="texto/text.html"
+}
+function link9(){
+  frame.src="listas/ListaDefinicion.html"
+}
+function link10(){
+  frame.src="listas/ListaDefinicion-2.html"
+}
+function link11(){
+  frame.src="listas/ListaDefinicion-3.html"
+}
+function link12(){
+  frame.src="geolocalizacion/geolocal.html"
+}
+function link13(){
+  frame.src="geolocalizacion/geolocalerror.html"
+}
+function link14(){
+  frame.src="geolocalizacion/geoloca-googlemap.html"
+}
+function link15(){
+  frame.src="geolocalizacion/geolocOpciones.html"
+}
+function link16(){
+  frame.src="geolocalizacion/geolocmonitor.html"
 }
 </script>
 </body>

@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+ <head> 
+ <meta charset="utf-8"> 
+ <title>Posición de observación</title> 
+ <script> //Establece variable global
+  var watchID; 
+  function showPosition() { 
+   if(navigator.geolocation) { 
+    watchID = navigator.geolocation.watchPosition(successCallback); 
+   } 
+   else { 
+     alert("Lo sentimos, su navegador no admite la geolocalización HTML5.");   
+    } 
+  } 
+  function successCallback(position) { 
+   toggleWatchBtn.innerHTML = "Detener monitorear"; 
+   // Comprobar que la posición ha sido cambiada o no antes de hacer nada
+   if(prevLat != position.coords.latitude || 
+   prevLong != position.coords.longitude)
+   { // Establecer la ubicación anterior
+     var prevLat = position.coords.latitude; 
+     var prevLong = position.coords.longitude; 
+     // Obtener el puesto actual
+     var positionInfo = "Su posición actual es (" + "Latitud: " + position.coords.latitude + ", " + "Longitud: " + position.coords.longitude + ")";    
+     document.getElementById("result").innerHTML = positionInfo; 
+   } 
+  } 
+  function startWatch() { 
+    var result = document.getElementById("result"); 
+    var toggleWatchBtn = document.getElementById("toggleWatchBtn");    
+    toggleWatchBtn.onclick = function() { 
+    if(watchID) { 
+      toggleWatchBtn.innerHTML = "Empezar a ver";    
+      navigator.geolocation.clearWatch(watchID); 
+      watchID = false; 
+    } 
+    else { 
+      toggleWatchBtn.innerHTML = "Buscando Ubicación geográfica ..."; 
+      showPosition(); 
+    } 
+   } 
+  } // Inicializar todo el sistema (arriba)
+  window.onload = startWatch; 
+ </script> 
+</head> 
+ <body> 
+  <button type="button" id="toggleWatchBtn">
+      Empezar a ver</button> 
+  <div id="result"> 
+   <!--La información de la posición se insertará aquí--> 
+  </div> 
+ </body> 
+</html>

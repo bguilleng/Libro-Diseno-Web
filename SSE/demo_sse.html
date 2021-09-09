@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html lang="en">
+ <head>
+ <title>Uso evento Server-Sent </title>
+ <script>
+ window.onload = function()
+ { var source = new EventSource("server_time.js");
+ source.onmessage = function(event)
+ { document.getElementById("result").innerHTML +=
+ "Nueva hora recibida del servidor web: " + event.data + "<br>";
+ };
+ };
+ </script>
+ </head>
+ <body>
+ <div id="result">
+ <!--La respuesta del servidor se insertará aquí-->
+ </div>
+ </body> 
+</html>
+

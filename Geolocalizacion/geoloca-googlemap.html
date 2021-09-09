@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+ <head> 
+  <meta charset="utf-8"> 
+  <title>Uso de Google Maps</title> 
+  <script> 
+    function showPosition() { 
+      navigator.geolocation.getCurrentPosition(showMap); 
+    } 
+    function showMap(position) { 
+      // Obtener datos de ubicación
+var latlong = position.coords.latitude + "," + position.coords.longitude; 
+      // Establecer la URL de origen del mapa de Google
+var mapLink = "https://maps.googleapis.com/maps/api/staticmap?center="+latlong+"&zoom=16&size=400x300&output=embed";
+    document.getElementById("embedMap").innerHTML = "<img src='"+ mapLink +"'>";
+    } 
+  </script> 
+ </head> 
+ <body> 
+  <button type="button" onclick="showPosition();">
+   Mostrar mi posición en Google Map</button> 
+  <div id="embedMap"> 
+   <!--El mapa de Google se incrustará aquí--> 
+  </div> 
+ </body> 
+</html>
+
+
+

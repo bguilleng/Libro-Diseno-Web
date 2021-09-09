@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+ <head> 
+ <meta charset="utf-8"> 
+ <title>Uso de Google Maps</title> 
+ <style>
+#GoogleMaps {
+  width: 800px;
+  height: 200px;
+  border: solid 10px #eee;
+    border-radius:5px;
+    box-shadow:5px 5px 5px #ccc;
+}
+</style>
+<script type="text/javascript" 
+  src="http://maps.google.com/maps/api/js?sensor=true"></script>
+
+ <script> 
+  function showPosition() 
+  { 
+   if(navigator.geolocation) 
+   { 
+    navigator.geolocation.getCurrentPosition(showMap, showError); 
+   } 
+   else 
+   { 
+    alert("Lo sentimos, su navegador no admite la geolocalización HTML5."); 
+   } 
+  } // Definir la función de devolución de llamada para un intento exitoso
+  function showMap(position) 
+  { // Obtener datos de ubicación
+   lat = position.coords.latitude; 
+   long = position.coords.longitude; 
+   var latlong = new google.maps.LatLng(lat, long); 
+   var myOptions = { center: latlong, zoom: 16, mapTypeControl: true, navigationControlOptions: { style:google.maps.NavigationControlStyle.SMALL } } 
+   
+  var map = new 
+  google.maps.Map(document.getElementById("GoogleMaps"), 
+  myOptions); 
+  var marker = new 
+  google.maps.Marker({ position:latlong, map:map, title:"Estas aquí!" 
+  }); 
+ } // Definir la función de devolución de llamada para un intento fallido
+ function showError(error) { 
+  if(error.code == 1) { 
+   result.innerHTML = 
+   "Has decidido no compartir tu posición, pero está bien. No te volveremos a preguntar."; 
+  } else if(error.code == 2) { 
+    result.innerHTML = 
+    "La red está caída o no se puede llegar al servicio de posicionamiento."; 
+  } else if(error.code == 3) { 
+    result.innerHTML = 
+    "El intento se canceló antes de que pudiera obtener los datos de ubicación."; 
+  } else { result.innerHTML = 
+    "Error de geolocalización desconocido."; 
+  } 
+ } 
+ </script> 
+</head> 
+ <body> 
+  <button type="button" onclick="showPosition();">
+    Mostrar mi posición en Google Map</button> 
+    <p id="result">Donde estas?</p>
+  <div id="GoogleMaps" style="width: 600px; height: 600px;"> 
+  <!--El mapa de Google se incrustará aquí--> 
+  </div> 
+ </body> 
+</html>

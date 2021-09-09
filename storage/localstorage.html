@@ -1,0 +1,19 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejemplo de localstorage</title>
+<script> // Comprobar si el objeto localStorage existe
+ if(localStorage) { // Almacenar datos
+ localStorage.setItem("first_name", "Giovanny"); // Recuperar datos
+ alert("Hola, " + localStorage.getItem("first_name"));
+ } else {
+ alert(" Lo sentimos, su navegador no admite almacenamiento local.");
+ } 
+</script>
+
+</head>
+
+<body>
+</body>
+</html>

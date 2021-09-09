@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html lang="en">
+ <head>
+ <meta charset="utf-8">
+ <title>Iniciar/Detener Web Worker</title>
+ <script> // Configurar variable global
+ var worker; function startWorker()
+ { // Inicializar web worker
+ worker = new Worker("worker.js");
+ // Ejecutar la función de actualización, cuando recibimos un mensaje de worker
+ worker.onmessage = update;
+ // Ejecutar la función de actualización, cuando recibimos un mensaje 
+ worker.postMessage("start");
+ }
+ function update(event)
+ { // Actualizar la página con el mensaje actual del trabajador
+ document.getElementById("result").innerHTML = event.data;
+ }
+ function stopWorker()
+ { // Detener al worker
+ worker.terminate();
+ }
+ </script>
+ </head>
+ <body>
+ <h1>Demostración de Web Worker</h1>
+ <button onclick="startWorker();" type="button">
+ Iniciar web worker</button>
+ <button type="button" onclick="stopWorker();">
+ Detener Web Worker</button>
+ <div id="result">
+ <!--Los mensajes recibidos se insertarán aquí-->
+ </div>
+ </body> 
+</html>
+

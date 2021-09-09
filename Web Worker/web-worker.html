@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+<html lang="en">
+ <head>
+ <meta charset="utf-8">
+ <title>Utilizado Web Worker</title>
+ <script>
+ if(window.Worker) { //Crear un nuevo web worker
+   var worker = new Worker("worker.js");
+   //Ejecuta el Controlador de eventos onMessage
+   worker.onmessage = function(event)
+   {
+    document.getElementById("result").innerHTML = event.data;
+   };
+ }
+ else
+ {
+  alert("Lo sentimos, su navegador no es compatible con web worker.");
+ }
+
+ </script>
+ </head>
+ <body>
+ <p> Salida: <output id="result"></output></p>
+ 	 <!--Los mensajes recibidos se insertarán aquí-->
+ </div>
+ </body> 
+</html>
+

@@ -1,0 +1,155 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <title>Definición del autor del documento</title>
+ <meta name="author" content="Giovanny Guillen"> 
+ <meta name="keywords" content="HTML, CSS, javaScript">
+ <meta name="description" content="Referencias fáciles de entender en HTML, CSS, javaScript y más..."> 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<style>
+.box {
+  width:70%;
+  height:200px;
+  background:#FFF;
+  margin:40px auto;
+}
+.effect8
+{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect8:before, .effect8:after
+{
+  content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect8:after
+{
+  right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+</style>
+</head>
+<body>
+ <div id="greet"></div>
+ <script> document.getElementById("greet").innerHTML = "Hola mundo!";
+ </script>
+ <noscript>
+ <p>Oops! Este sitio web requiere un navegador habilitado para JavaScript.</p>
+ </noscript>
+ <br><br>
+ 
+<div class="box effect8">
+<form>
+ <label for="mycolor">Selecciona un Color:</label>
+ <input type="color" value="#00ff00" id="mycolor"> 
+</form>
+</div>
+ <br><br>
+ 
+<div class="box effect8">
+<form>
+ <label for="mydate">Selecciona la Fecha:</label>
+ <input type="date" value="2019-04-15" id="mydate"> 
+</form>
+</div>
+ <br><br>
+ 
+<div class="box effect8">
+<form>
+ <label for="mydatetime">Seleccione la fecha y hora:</label>
+ <input type="datetime-local" id="mydatetime"> 
+</form>
+</div>
+ <br><br>
+ 
+<div class="box effect8">
+<form>
+ <label for="myemail">Ingrese dirección de Email:</label>
+ <input type="email" id="myemail" required> 
+</form>
+</div>
+ <br><br>
+ 
+<div class="box effect8">
+<form>
+ <label for="mymonth">Selecciona el Mes:</label>
+ <input type="month" id="mymonth"> 
+</form>
+</div>
+ <br><br>
+ 
+<div class="box effect8">
+<form>
+ <label for="mynumber">Ingrese un Número:</label>
+ <input type="number" min="1" max="10" step="0.5" id="mynumber">
+</form>
+</div>
+ <br><br>
+ 
+<div class="box effect8">
+<form>
+ <label for="mynumber">Selecciona un Número:</label>
+ <input type="range" min="1" max="10" step="0.5" id="mynumber"> 
+</form>
+</div>
+ <br><br>
+ 
+<div class="box effect8">
+<form>
+ <label for="mysearch">Buscar en el Website:</label>
+ <input type="search" id="mysearch"> 
+</form>
+</div>
+ <br><br>
+ 
+<div class="box effect8">
+<form>
+ <label for="myphone">Número Teléfono:</label>
+ <input type="tel" id="myphone" placeholder="xx-xxxx-xxxx" required> 
+</form>
+</div>
+ <br><br>
+ 
+<div class="box effect8">
+<form>
+ <label for="mytime">Seleccione la hora:</label>
+ <input type="time" id="mytime"> 
+</form>
+</div>
+ <br><br>
+ 
+<div class="box effect8">
+<form>
+ <label for="myurl">Ingrese la dirección URL:</label>
+ <input type="url" id="myurl" required> 
+</form>
+</div>
+ <br><br>
+ 
+<div class="box effect8">
+<form>
+ <label for="myweek">Seleccione la semana:</label>
+ <input type="week" id="myweek"> 
+</form>
+</div>
+</body>
+</html>

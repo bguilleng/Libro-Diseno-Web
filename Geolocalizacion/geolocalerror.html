@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+ <meta charset="utf-8"> 
+ <title>Manejo de errores de geolocalización</title> 
+ <script> // Configurar variable global
+ var result; 
+ function showPosition() 
+ { // Almacenar el elemento donde la página muestra el resultado
+  result = document.getElementById("result"); 
+  // Si la geolocalización está disponible, intente obtener la posición del visitante
+  if(navigator.geolocation) 
+  { 
+    navigator.geolocation.getCurrentPosition(successCallback, 
+    errorCallback); result.innerHTML = 
+    "Obtener la información de la posición..."; 
+  } 
+  else 
+  { 
+    alert("Lo sentimos, su navegador no admite la geolocalización HTML5."); 
+  } 
+ }; // Definir la función de devolución de llamada para un intento exitoso
+ function successCallback(position) 
+ { 
+   result.innerHTML = "Su posición actual es (" + "Latitud: " + 
+   position.coords.latitude + ", " + "Longitud: " + 
+   position.coords.longitude + ")"; 
+ } // Definir la función de devolución de llamada para un intento fallido
+ function errorCallback(error) 
+ { 
+  if(error.code == 1) 
+  { 
+   result.innerHTML = "Has decidido no compartir tu posición, pero está bien. No te volveremos a preguntar."; 
+  }  
+  else if(error.code == 2) 
+  { 
+   result.innerHTML = "La red está caída o el posicionamiento no se puede acceder al servicio."; 
+  } 
+  else if(error.code == 3) 
+  { 
+   result.innerHTML = "Se agotó el tiempo antes de que pudiera  obtener los datos de ubicación."; 
+  } 
+  else 
+  { 
+   result.innerHTML = "Error de geolocalización debido a un error desconocido."; 
+  } 
+ } 
+ </script> 
+</head> 
+<body> 
+ <div id="result"> 
+  <!--La información de la posición se insertará aquí--> 
+ </div> 
+ <button type="button" onclick="showPosition();">
+  Mostrar posición</button> 
+ </body> 
+</html>
+

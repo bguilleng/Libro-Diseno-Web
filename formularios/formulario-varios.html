@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+</head>
+<style type="text/css">
+.form-style-9{
+	max-width: 450px;
+	background: #FAFAFA;
+	padding: 30px;
+	margin: 50px auto;
+	box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+	border-radius: 10px;
+	border: 6px solid #305A72;
+}
+.form-style-9 ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+.form-style-9 ul li{
+	display: block;
+	margin-bottom: 10px;
+	min-height: 35px;
+}
+.form-style-9 ul li  .field-style{
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	padding: 8px;
+	outline: none;
+	border: 1px solid #B0CFE0;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+
+}.form-style-9 ul li  .field-style:focus{
+	box-shadow: 0 0 5px #B0CFE0;
+	border:1px solid #B0CFE0;
+}
+.form-style-9 ul li .field-split{
+	width: 49%;
+}
+.form-style-9 ul li .field-full{
+	width: 100%;
+}
+.form-style-9 ul li input.align-left{
+	float:left;
+}
+.form-style-9 ul li input.align-right{
+	float:right;
+}
+.form-style-9 ul li textarea{
+	width: 100%;
+	height: 100px;
+}
+.form-style-9 ul li input[type="button"], 
+.form-style-9 ul li input[type="submit"] {
+	-moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #3985B1;
+	box-shadow: inset 0px 1px 0px 0px #3985B1;
+	background-color: #216288;
+	border: 1px solid #17445E;
+	display: inline-block;
+	cursor: pointer;
+	color: #FFFFFF;
+	padding: 8px 18px;
+	text-decoration: none;
+	font: 12px Arial, Helvetica, sans-serif;
+}
+.form-style-9 ul li input[type="button"]:hover, 
+.form-style-9 ul li input[type="submit"]:hover {
+	background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
+	background-color: #28739E;
+}
+fieldset {
+    border: 1px solid#ddd;
+    padding: 12px;
+}
+
+legend {
+    font-size: 18px;
+    padding: 0 10px;
+  color: #ccc;
+  background-color: #333;
+  box-shadow: 0 0 15px #000;
+}
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 13.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:hover {
+  background: #9faab7;
+}
+.option-input:checked {
+  background: #40e0d0;
+}
+.option-input:checked::before {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  content: '✔';
+  display: inline-block;
+  font-size: 26.66667px;
+  text-align: center;
+  line-height: 40px;
+}
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #40e0d0;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.option-input.radio {
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}
+</style>
+<body>
+<form class="form-style-9">
+ <label for="usuario">Usuario:</label>
+ <input type="text" name="usuario" id="usuario"> 
+</form>
+<br>
+<form class="form-style-9">
+ <label for="clave-user">Clave:</label>
+ <input type="clave" name="clave-usuario" id=" clave-user"> 
+</form>
+<br>
+<form class="form-style-9">
+ <input type="radio" name="genero" id="Masculino" class="option-input radio">
+ <label for="Masculino">Masculino</label>
+ <input type="radio" name="genero" id="Femenino" class="option-input radio">
+ <label for="Femenino">Femenino</label> 
+</form>
+<br>
+<form class="form-style-9">
+<div>
+ <input type="checkbox" name="deportes" id="soccer" class="option-input checkbox">
+ <label for="futbol">Fútbol</label>
+ </div>
+ <div>
+ <input type="checkbox" name="deportes" id="cricket" class="option-input checkbox">
+ <label for="cricket">Cricket</label>
+ </div>
+ <div>
+ <input type="checkbox" name="deportes" id="baseball" class="option-input checkbox">
+ <label for="baseball">Baseball</label> 
+</div>
+</form>
+<br>
+<form class="form-style-9">
+ <label for="seleccion-archivo">Cargar:</label>
+ <input type="file" name="cargar" id=" seleccion-archivo "> 
+</form>
+<br>
+<form class="form-style-9">
+ <label for="direccion">Dirección:</label>
+ <textarea rows="3" cols="30" name="dinreccion" id="direccion" class="field-style"></textarea> 
+</form>
+<br>
+ <form class="form-style-9">
+    <label for="ciudad">Ciudad:</label>
+    <select name="ciudad" id="ciudad">
+        <option value="caracs">Caracas</option>
+        <option value="newyork">New York</option>
+        <option value="londres">Londres</option>
+    </select>
+</form>
+<br>
+<form action="action.php" method="post" class="form-style-9">
+ <label for="primer-nombre">Primer Nombre:</label>
+ <input type="text" name=" primer-nombre" id=" primer-nombre" class="field-style field-split align-left">
+ <input type="submit" value="Enviar">
+ <input type="reset" value="Restablecer"> 
+</form>
+<br>
+<form class="form-style-9">
+ <fieldset>
+ <legend>Datos de contacto</legend>
+<div>
+ <label>Dirección de correo: <input type="email" name="email"></label>
+ </div>
+ <div>
+ <label>Número de teléfono: <input type="text" name="telefono"></label>
+ </div>
+ </fieldset> 
+</form>
+
+
+</body>
+</html>
